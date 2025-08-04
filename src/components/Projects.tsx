@@ -6,40 +6,49 @@ import faithimpactImage from "@/assets/faithimpact-project.jpg";
 
 const projects = [
   {
-    title: "Carelane",
-    category: "E-commerce Platform",
-    description: "Led product strategy for a premium jewelry e-commerce platform, focusing on user experience optimization and conversion rate improvements.",
-    image: carelaneImage,
-    achievements: [
-      "Increased conversion rate by 35%",
-      "Improved user engagement by 50%",
-      "Launched mobile-first redesign"
-    ],
-    technologies: ["React", "Node.js", "MongoDB", "AWS"]
-  },
-  {
     title: "Radii",
-    category: "Fintech Platform",
-    description: "Managed product development for a financial technology platform, focusing on user onboarding and regulatory compliance.",
+    category: "Retail Intelligence Platform",
+    description: "Co-founded and led product development for a retail intelligence platform helping African SMEs understand sales patterns and make data-driven decisions.",
     image: radiiImage,
+    userStory: "As a small retailer, I want to understand my sales patterns without spending hours on manual reporting, so I can focus on growing my business and making informed inventory decisions.",
     achievements: [
-      "Reduced onboarding time by 60%",
-      "Achieved 99.9% compliance score",
-      "Launched API marketplace"
+      "Reduced manual reporting time by 60%",
+      "Increased user retention by 35%", 
+      "Conducted 30+ user interviews",
+      "Successfully pivoted from retail chains to all retail businesses"
     ],
-    technologies: ["Vue.js", "Python", "PostgreSQL", "Docker"]
+    role: "Co-founder & Growth/Product Lead",
+    stage: "MVP to post-product-market fit"
   },
   {
-    title: "FaithImpact",
-    category: "Social Impact Platform",
-    description: "Developed product roadmap for a community-driven platform connecting faith-based organizations with social impact initiatives.",
+    title: "Harbour 427",
+    category: "Mission & Social Impact Platform",
+    description: "Built a unified platform connecting donors, volunteers, and prayer partners to credible mission projects globally, making Kingdom work as accessible as booking a flight.",
     image: faithimpactImage,
+    userStory: "As a faith-driven individual, I want to easily discover, support, and engage with mission projects in one trusted place, so I can meaningfully contribute through giving, praying, or volunteering.",
     achievements: [
-      "Connected 1000+ organizations",
-      "Facilitated $2M+ in donations",
-      "Built community of 50K+ users"
+      "Centralized mission project discovery",
+      "Connected global donor network",
+      "Enabled transparent impact tracking",
+      "Created unified engagement platform"
     ],
-    technologies: ["React Native", "Firebase", "GraphQL", "Stripe"]
+    role: "Product Lead",
+    stage: "Platform Development"
+  },
+  {
+    title: "Carelane",
+    category: "Customer Support Platform",
+    description: "Developed a unified customer support hub for SMEs in emerging markets, centralizing conversations across multiple channels to improve response times and customer retention.",
+    image: carelaneImage,
+    userStory: "As an SME owner, I want all my customer conversations from WhatsApp, email, and social media in one place, so I can respond faster and never miss an important inquiry.",
+    achievements: [
+      "Unified multi-channel conversations",
+      "Automated ticket routing system",
+      "Improved response time metrics",
+      "Seamless tool integrations"
+    ],
+    role: "Product Manager",
+    stage: "Growth & Optimization"
   }
 ];
 
@@ -66,27 +75,54 @@ const Projects = () => {
               </div>
               
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-3 text-foreground">
-                  {project.title}
-                </h3>
+                <div className="mb-4">
+                  <span className="text-secondary font-semibold text-sm uppercase tracking-wide">
+                    {project.category}
+                  </span>
+                  <h3 className="text-xl font-bold mt-2 mb-3 text-foreground">
+                    {project.title}
+                  </h3>
+                  <div className="text-xs text-muted-foreground mb-2">
+                    {project.role} • {project.stage}
+                  </div>
+                </div>
                 
                 <p className="text-muted-foreground mb-4 leading-relaxed text-sm">
                   {project.description}
                 </p>
+                
+                <div className="mb-4">
+                  <h4 className="text-sm font-semibold mb-2 text-secondary">User Story</h4>
+                  <p className="text-xs text-muted-foreground italic border-l-2 border-secondary/30 pl-3">
+                    "{project.userStory}"
+                  </p>
+                </div>
+                
+                <div className="mb-4">
+                  <h4 className="text-sm font-semibold mb-2 text-secondary">Key Impact</h4>
+                  <ul className="space-y-1">
+                    {project.achievements.slice(0, 2).map((achievement, idx) => (
+                      <li key={idx} className="flex items-center text-xs text-muted-foreground">
+                        <div className="w-1.5 h-1.5 bg-secondary rounded-full mr-2" />
+                        {achievement}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
                 
                 <div className="flex gap-3">
                   <Button 
                     size="sm" 
                     className="bg-secondary text-secondary-foreground hover:bg-secondary/90"
                   >
-                    Live
+                    Details
                   </Button>
                   <Button 
                     size="sm" 
                     variant="outline"
                     className="border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground"
                   >
-                    Source
+                    Live
                   </Button>
                 </div>
               </div>
