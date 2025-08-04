@@ -45,71 +45,48 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section className="py-20 px-6">
+    <section className="py-20 px-6 bg-background">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
+          <p className="text-secondary text-lg mb-4">My Recent Works</p>
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-            Product Impact
+            Projects
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Transforming ideas into successful products across diverse industries
-          </p>
         </div>
 
-        <div className="space-y-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <Card key={project.title} className="overflow-hidden bg-card border-border">
-              <div className={`grid md:grid-cols-2 gap-8 ${index % 2 === 1 ? 'md:grid-flow-col-dense' : ''}`}>
-                <div className={`${index % 2 === 1 ? 'md:col-start-2' : ''}`}>
-                  <img 
-                    src={project.image} 
-                    alt={project.title}
-                    className="w-full h-64 md:h-full object-cover"
-                  />
-                </div>
+            <Card key={project.title} className="overflow-hidden bg-card border-border hover:shadow-lg transition-shadow">
+              <div className="aspect-video w-full overflow-hidden">
+                <img 
+                  src={project.image} 
+                  alt={project.title}
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-3 text-foreground">
+                  {project.title}
+                </h3>
                 
-                <div className={`p-8 ${index % 2 === 1 ? 'md:col-start-1' : ''}`}>
-                  <div className="mb-4">
-                    <span className="text-secondary font-semibold text-sm uppercase tracking-wide">
-                      {project.category}
-                    </span>
-                    <h3 className="text-3xl font-bold mt-2 text-foreground">
-                      {project.title}
-                    </h3>
-                  </div>
-                  
-                  <p className="text-muted-foreground mb-6 leading-relaxed">
-                    {project.description}
-                  </p>
-                  
-                  <div className="mb-6">
-                    <h4 className="text-lg font-semibold mb-3 text-secondary">Key Achievements</h4>
-                    <ul className="space-y-2">
-                      {project.achievements.map((achievement, idx) => (
-                        <li key={idx} className="flex items-center text-muted-foreground">
-                          <div className="w-2 h-2 bg-secondary rounded-full mr-3" />
-                          {achievement}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  
-                  <div className="mb-6">
-                    <h4 className="text-lg font-semibold mb-3 text-secondary">Technologies</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {project.technologies.map((tech, idx) => (
-                        <span 
-                          key={idx}
-                          className="px-3 py-1 bg-muted text-muted-foreground rounded-full text-sm"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                  
-                  <Button className="bg-secondary text-secondary-foreground hover:bg-secondary/90">
-                    View Case Study
+                <p className="text-muted-foreground mb-4 leading-relaxed text-sm">
+                  {project.description}
+                </p>
+                
+                <div className="flex gap-3">
+                  <Button 
+                    size="sm" 
+                    className="bg-secondary text-secondary-foreground hover:bg-secondary/90"
+                  >
+                    Live
+                  </Button>
+                  <Button 
+                    size="sm" 
+                    variant="outline"
+                    className="border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground"
+                  >
+                    Source
                   </Button>
                 </div>
               </div>

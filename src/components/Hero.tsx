@@ -1,51 +1,68 @@
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-bg.jpg";
+import profilePhoto from "@/assets/profile-photo.jpg";
 
 const Hero = () => {
+  const scrollToContact = () => {
+    const element = document.getElementById('contact');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroImage})` }}
-      />
-      
-      {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-hero opacity-90" />
-      
-      {/* Content */}
-      <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 text-foreground">
-          Product Manager
-          <span className="block text-secondary">& Strategist</span>
-        </h1>
-        
-        <p className="text-xl md:text-2xl mb-8 text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-          Transforming ideas into impactful products. From Frontend Development to Product Management, 
-          I bridge the gap between technology and business value.
-        </p>
-        
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+    <section className="min-h-screen bg-background flex items-center py-20 px-6">
+      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+        {/* Left Content */}
+        <div>
+          <p className="text-secondary text-lg mb-4">Hello!</p>
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-foreground">
+            I'm Your Name
+          </h1>
+          
+          <div className="space-y-3 mb-8">
+            <div className="flex items-center text-foreground">
+              <div className="w-5 h-5 bg-secondary rounded-full mr-3 flex items-center justify-center">
+                <div className="w-2 h-2 bg-background rounded-full" />
+              </div>
+              <span>Product Manager</span>
+            </div>
+            <div className="flex items-center text-foreground">
+              <div className="w-5 h-5 bg-secondary rounded-full mr-3 flex items-center justify-center">
+                <div className="w-2 h-2 bg-background rounded-full" />
+              </div>
+              <span>Frontend Developer</span>
+            </div>
+            <div className="flex items-center text-foreground">
+              <div className="w-5 h-5 bg-secondary rounded-full mr-3 flex items-center justify-center">
+                <div className="w-2 h-2 bg-background rounded-full" />
+              </div>
+              <span>Strategic Thinker</span>
+            </div>
+            <div className="flex items-center text-foreground">
+              <div className="w-5 h-5 bg-secondary rounded-full mr-3 flex items-center justify-center">
+                <div className="w-2 h-2 bg-background rounded-full" />
+              </div>
+              <span>Problem Solver</span>
+            </div>
+          </div>
+          
           <Button 
-            size="lg" 
-            className="bg-secondary text-secondary-foreground hover:bg-secondary/90 px-8 py-6 text-lg font-semibold"
+            onClick={scrollToContact}
+            className="bg-secondary text-secondary-foreground hover:bg-secondary/90 px-8 py-3 text-lg"
           >
-            View My Work
-          </Button>
-          <Button 
-            variant="outline" 
-            size="lg"
-            className="border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground px-8 py-6 text-lg font-semibold"
-          >
-            Get In Touch
+            Get in Touch
           </Button>
         </div>
-      </div>
-      
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-secondary rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-secondary rounded-full mt-2 animate-pulse" />
+        
+        {/* Right Profile Image */}
+        <div className="flex justify-center">
+          <div className="w-80 h-80 rounded-full overflow-hidden border-4 border-secondary/20">
+            <img 
+              src={profilePhoto} 
+              alt="Profile" 
+              className="w-full h-full object-cover"
+            />
+          </div>
         </div>
       </div>
     </section>
