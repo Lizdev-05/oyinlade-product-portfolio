@@ -1,11 +1,13 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import carelaneImage from "@/assets/carelane-project.jpg";
 import radiiImage from "@/assets/radii-project.jpg";
 import faithimpactImage from "@/assets/faithimpact-project.jpg";
 
 const projects = [
   {
+    id: "radii",
     title: "Radii",
     category: "Retail Intelligence Platform",
     description: "Co-founded and led product development for a retail intelligence platform helping African SMEs understand sales patterns and make data-driven decisions.",
@@ -18,9 +20,11 @@ const projects = [
       "Successfully pivoted from retail chains to all retail businesses"
     ],
     role: "Co-founder & Growth/Product Lead",
-    stage: "MVP to post-product-market fit"
+    stage: "MVP to post-product-market fit",
+    liveUrl: "https://radii-demo.netlify.app"
   },
   {
+    id: "harbour427",
     title: "Harbour 427",
     category: "Mission & Social Impact Platform",
     description: "Built a unified platform connecting donors, volunteers, and prayer partners to credible mission projects globally, making Kingdom work as accessible as booking a flight.",
@@ -33,9 +37,11 @@ const projects = [
       "Created unified engagement platform"
     ],
     role: "Product Lead",
-    stage: "Platform Development"
+    stage: "Platform Development",
+    liveUrl: "https://harbour427-demo.netlify.app"
   },
   {
+    id: "carelane",
     title: "Carelane",
     category: "Customer Support Platform",
     description: "Developed a unified customer support hub for SMEs in emerging markets, centralizing conversations across multiple channels to improve response times and customer retention.",
@@ -48,7 +54,8 @@ const projects = [
       "Seamless tool integrations"
     ],
     role: "Product Manager",
-    stage: "Growth & Optimization"
+    stage: "Growth & Optimization",
+    liveUrl: "https://carelane-demo.netlify.app"
   }
 ];
 
@@ -114,15 +121,21 @@ const Projects = () => {
                   <Button 
                     size="sm" 
                     className="bg-secondary text-secondary-foreground hover:bg-secondary/90"
+                    asChild
                   >
-                    Details
+                    <Link to={`/project/${project.id}`}>
+                      Details
+                    </Link>
                   </Button>
                   <Button 
                     size="sm" 
                     variant="outline"
                     className="border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground"
+                    asChild
                   >
-                    Live
+                    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                      Live
+                    </a>
                   </Button>
                 </div>
               </div>
