@@ -51,13 +51,18 @@ const Contact = () => {
             <div className="space-y-6">
               <Card className="p-6 bg-card border-border">
                 <h4 className="font-semibold mb-2 text-foreground">Email</h4>
-                <p className="text-muted-foreground">your.email@example.com</p>
+                <p className="text-muted-foreground">
+                  ojesanmioyinlade@gmail.com
+                </p>
               </Card>
 
               <Card className="p-6 bg-card border-border">
                 <h4 className="font-semibold mb-2 text-foreground">LinkedIn</h4>
                 <p className="text-muted-foreground">
-                  linkedin.com/in/yourprofile
+                  <a href=" https://www.linkedin.com/in/oyinlade-ojesanmi/">
+                    {" "}
+                    https://www.linkedin.com/in/oyinlade-ojesanmi/
+                  </a>
                 </p>
               </Card>
 
@@ -86,6 +91,7 @@ const Contact = () => {
                     placeholder="Your Full Name"
                     minLength={3}
                     required
+                    value={name}
                     onChange={(e) => {
                       setName(e.target.value);
                     }}
@@ -97,6 +103,7 @@ const Contact = () => {
                     placeholder="Your Email"
                     className="bg-background border-border text-foreground"
                     required
+                    value={email}
                     onChange={(e) => {
                       setEmail(e.target.value);
                     }}
@@ -114,6 +121,7 @@ const Contact = () => {
                     rows={5}
                     className="bg-background border-border text-foreground"
                     required
+                    value={message}
                     onChange={(e) => {
                       setMessage(e.target.value);
                     }}
