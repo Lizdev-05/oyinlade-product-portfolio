@@ -1,73 +1,130 @@
-# Welcome to your Lovable project
+# 📗 Table of Contents
 
-## Project info
+- [📗 Table of Contents](#-table-of-contents)
+- [📖 Portfolio ](#-Personal-Portfolio)
 
-**URL**: https://lovable.dev/projects/9be76b18-e6b6-4138-9965-6658f950723e
+  - [🛠 Built With ](#-built-with-)
+    - [Tech Stack ](#tech-stack-)
+    - [Key Features ](#key-features-)
+  - [🚀 Live Demo ](#-live-demo-)
+  - [💻 Getting Started ](#-getting-started-)
+    - [Prerequisites](#prerequisites)
+    - [Setup](#setup)
+    - [Install](#install)
+    - [Usage](#usage)
+    - [Run tests](#run-tests)
+    - [Deployment](#deployment)
+  - [👥 Authors ](#-authors-)
+  - [🔭 Future Features ](#-future-features-)
+  - [🤝 Contributing ](#-contributing-)
+  - [⭐️ Show your support ](#️-show-your-support-)
+  - [🙏 Acknowledgments ](#-acknowledgments-)
+  - [📝 License ](#-license-)
 
-## How can I edit this code?
+# 📖 Personal Portfolio <a name="about-project"></a>
 
-There are several ways of editing your application.
+**Personal Portfolio** This is a portfolio to demonstrate my competencies, it showcases my work to potential employers and also presents evidence of my relevant skills and abilities.
 
-**Use Lovable**
+## 🛠 Built With <a name="built-with"></a>
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/9be76b18-e6b6-4138-9965-6658f950723e) and start prompting.
+### Tech Stack <a name="tech-stack"></a>
 
-Changes made via Lovable will be committed automatically to this repo.
+<details>
+  <summary>Client</summary>
+  <ul>
+    <li><a href="https://reactjs.org/">React.js</a></li>
+    <li><a href="https://nextjs.org/"></a>getForm.io</li>
+    <li><a href="#">CSS</a></li>
+    <li><a href="#">Tailwind</a></li>
+    <li><a href="https://aos.com/">AOS Animations</a></li>
+    <li><a href="https://remixicon.com/">React Icon</a></li>
+  </ul>
+</details>
 
-**Use your preferred IDE**
+## 🚀 Live Demo <a name="live-demo"></a>
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- [Lizdev Portfolio](https://lizdev-portforlio.netlify.app/)
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-Follow these steps:
+## 💻 Getting Started <a name="getting-started"></a>
+
+To get a local copy up and running, follow these steps.
+
+### Prerequisites
+
+In order to run this project you need:
+
+### Setup
+
+Clone this repository to your desired folder:
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+  cd my-folder
+  git clone git@github.com:Lizdev-05/lade-portfolio.git
 ```
 
-**Edit a file directly in GitHub**
+### Install
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Install this project with:
 
-**Use GitHub Codespaces**
+```sh
+  cd lade-portfolio
+  yarn install
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Usage
 
-## What technologies are used for this project?
+To run the project, execute the following command:
 
-This project is built with:
+```sh
+  npm run dev
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### Deployment
 
-## How can I deploy this project?
+You can deploy this project using:
 
-Simply open [Lovable](https://lovable.dev/projects/9be76b18-e6b6-4138-9965-6658f950723e) and click on Share -> Publish.
+```sh
+  git push main
+```
 
-## Can I connect a custom domain to my Lovable project?
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-Yes, you can!
+## 👥 Author <a name="author"></a>
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+👤 **Ojesanmi Elizabeth Oyin**
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+- GitHub: [@githubhandle](https://github.com/Lizdev-05)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/elizabeth-oyinlade-ojesanmi-0702aa16a)
+
+## 🔭 Future Features <a name="future-features"></a>
+
+- [ ] **I will add a feature for a new project.**
+- [ ] **I will add some animations.**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🤝 Contributing <a name="contributing"></a>
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## ⭐️ Show your support <a name="support"></a>
+
+If you like this project consider giving it a star ⭐️.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./LICENSE) licensed.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
