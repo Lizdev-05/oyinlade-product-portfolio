@@ -1,11 +1,11 @@
 import { Button } from "@/components/ui/button";
-import profilePhoto from "@/assets/profile-photo.jpg";
+import profilePhoto from "@/assets/oyins.jpg";
 
 const Hero = () => {
   const scrollToContact = () => {
-    const element = document.getElementById('contact');
+    const element = document.getElementById("contact");
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -16,9 +16,9 @@ const Hero = () => {
         <div>
           <p className="text-secondary text-lg mb-4">Hello!</p>
           <h1 className="text-5xl md:text-6xl font-bold mb-6 text-foreground">
-            I'm Your Name
+            I'm E.O Ojesanmi
           </h1>
-          
+
           <div className="space-y-3 mb-8">
             <div className="flex items-center text-foreground">
               <div className="w-5 h-5 bg-secondary rounded-full mr-3 flex items-center justify-center">
@@ -45,21 +45,21 @@ const Hero = () => {
               <span>Problem Solver</span>
             </div>
           </div>
-          
-          <Button 
+
+          <Button
             onClick={scrollToContact}
             className="bg-secondary text-secondary-foreground hover:bg-secondary/90 px-8 py-3 text-lg"
           >
             Get in Touch
           </Button>
         </div>
-        
+
         {/* Right Profile Image */}
         <div className="flex justify-center">
           <div className="w-80 h-80 rounded-full overflow-hidden border-4 border-secondary/20">
-            <img 
-              src={profilePhoto} 
-              alt="Profile" 
+            <img
+              src={profilePhoto}
+              alt="Profile"
               className="w-full h-full object-cover"
             />
           </div>
