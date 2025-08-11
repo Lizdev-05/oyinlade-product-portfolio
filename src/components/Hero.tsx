@@ -15,8 +15,8 @@ const Hero = () => {
         {/* Left Content */}
         <div>
           <p className="text-secondary text-lg mb-4">Hello!</p>
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-foreground">
-            I'm E.O Ojesanmi
+          <h1 className="text-5xl md:text-5xl font-bold mb-6 text-foreground">
+            I'm Oyinlade Ojesanmi
           </h1>
 
           <div className="space-y-3 mb-8">
